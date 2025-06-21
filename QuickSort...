@@ -1,4 +1,5 @@
 function quickSort(arr) {
+// base case for one or less than one element in array return array
     if (arr.length <= 1) {
         return arr;
     }
