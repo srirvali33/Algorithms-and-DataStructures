@@ -5,9 +5,6 @@
  */
 var search = function(nums, target) {
 
-
-
-   
     var left = 0;
     var right= nums.length-1;
     var middle=0;
