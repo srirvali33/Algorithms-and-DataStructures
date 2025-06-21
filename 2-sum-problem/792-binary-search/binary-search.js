@@ -11,7 +11,7 @@ var search = function(nums, target) {
     var left = 0;
     var right= nums.length-1;
     var middle=0;
-    //var middle= Math.ceil(nums.length/2);
+   
     while(left <= right){
         
         middle=Math.floor((right-left/2));
