@@ -13,7 +13,7 @@ var search = function(nums, target) {
     var middle=0;
     //var middle= Math.ceil(nums.length/2);
     while(left <= right){
-        if(!nums.includes(target)) return -1
+        
         middle=Math.floor((right-left/2));
 
         let midVal=nums[middle]
