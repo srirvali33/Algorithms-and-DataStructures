@@ -1,3 +1,6 @@
+// ---- front [ _ _ _] ---rear  OP: [ [ 6, 8 ], 2 ]
+
+
 class Node{
     constructor(val){
         this.val=val;
