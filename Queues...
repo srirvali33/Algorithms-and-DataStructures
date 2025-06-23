@@ -1,0 +1,74 @@
+class Node{
+    constructor(val){
+        this.val=val;
+        this.next=null;
+    }
+    
+};
+
+class Queue{
+    constructor(){
+    this.front=null
+    this.rear=null;
+    this.size=0;
+    }
+    
+    // Add at rear end
+    
+    enqueue(value){
+        if(!this.front){
+            this.front=value;
+            this.rear=value;
+            this.size=this.size+1;
+        }else{
+            this.rear.next=value;
+            this.rear=value;
+            this.size=this.size+1
+        }
+    }
+    
+    // Remove from front end
+    
+    dequeue(){
+        if(!this.front){
+        return null;
+        }else if(this.size==1) {
+            this.front=null;
+            this.rear=null;
+            this.size=0;
+        }else{
+            var delNode=this.front;
+            this.front=delNode.next;
+            delNode.next=null;
+            this.size=this.size-1;
+        }
+        
+    }
+    
+    //print from front to rear
+    
+    print(){
+        let res=[];
+        if(!this.front) return res;
+        var currNode=this.front;
+        while(currNode!=null){
+            res.push(currNode.val);
+            currNode=currNode.next;
+        }
+        return [res,this.size];
+    }
+}  
+
+var q= new Queue();
+var newNode=new Node(2);
+var newNode2=new Node(5);
+var newNode3=new Node(6);
+var newNode4=new Node(8);
+q.enqueue(newNode);
+q.dequeue();
+q.enqueue(newNode2);
+q.dequeue();
+q.enqueue(newNode3);
+q.enqueue(newNode4);
+
+console.log(q.print());
