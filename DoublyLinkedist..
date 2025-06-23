@@ -1,0 +1,78 @@
+// [ [ 5, 8 ], 2 ] op
+class Node{
+    constructor(val){
+        this.val=val;
+        this.next=null;
+        this.prev=null;
+    }
+    
+};
+
+class DoublyLinkedList{
+    constructor(){
+    this.head=null;
+    this.tail=null;
+    this.size=0;
+    }
+    
+    push(value){
+        if(!this.head){
+            this.head=value;
+            this.tail=value
+            this.size=this.size+1;
+        }else{
+            let currTail=this.tail;
+            this.tail.next=value;
+            this.tail=value;
+            this.tail.prev=currTail;
+            this.size=this.size+1
+        }
+        return this.head;
+    }
+    
+    pop(){
+        if(!this.head){
+        return null;
+        }else if(this.size==1) {
+            this.tail=null;
+            this.head=null;
+            this.size=0;
+        }else{
+            let currNode=this.head;
+            for(let i=0; i < this.size-1; i++){
+                currNode=currNode.next;
+            }
+            this.tail=currNode.prev;
+            this.tail.next=null;
+            currNode.prev=null;
+            
+            this.size=this.size-1;
+        }
+        
+    }
+    
+    print(){
+        let res=[];
+        if(!this.head) return res;
+        var currNode=this.head;
+        while(currNode!=null){
+            res.push(currNode.val);
+            currNode=currNode.next;
+        }
+        return [res,this.size];
+    }
+}  
+
+var dll= new DoublyLinkedList();
+var newNode=new Node(2);
+var newNode2=new Node(5);
+var newNode3=new Node(6);
+var newNode4=new Node(8);
+dll.push(newNode);
+dll.pop();
+dll.push(newNode2);
+dll.push(newNode3);
+dll.pop();
+dll.push(newNode4);
+
+console.log(dll.print());
