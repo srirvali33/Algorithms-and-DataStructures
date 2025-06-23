@@ -1,4 +1,4 @@
-// ---- front [ _ _ _] ---rear  OP: [ [ 6, 8 ], 2 ]
+// ---- front [ 1_ 2_ 3_] ---rear  OP: [ [ 6, 8 ], 2 ]
 
 
 class Node{
