@@ -1,0 +1,64 @@
+class Node{
+    constructor(val){
+        this.val=val;
+        this.next=null;
+    }
+    
+};
+
+class Stack{
+    constructor(){
+    this.top=null
+    this.size=0;
+    }
+    
+    push(value){
+        if(!this.top){
+            this.top=value
+            this.size=this.size+1;
+        }else{
+            value.next=this.top;
+            this.top=value;
+            this.size=this.size+1
+        }
+    }
+    
+    pop(){
+        if(!this.top){
+        return null;
+        }else if(this.size==1) {
+            this.top=null;
+            this.size=0;
+        }else{
+            var delNode=this.top;
+            this.top=delNode.next;
+            delNode.next=null;
+            this.size=this.size-1;
+        }
+        
+    }
+    
+    print(){
+        let res=[];
+        if(!this.top) return res;
+        var currNode=this.top;
+        while(currNode!=null){
+            res.push(currNode.val);
+            currNode=currNode.next;
+        }
+        return [res,this.size];
+    }
+}  
+
+var stack= new Stack();
+var newNode=new Node(2);
+var newNode2=new Node(5);
+var newNode3=new Node(6);
+var newNode4=new Node(8);
+stack.push(newNode);
+stack.push(newNode2);
+stack.push(newNode3);
+stack.push(newNode4);
+stack.pop();
+
+console.log(stack.print());
