@@ -9,7 +9,7 @@ var threeSum = function(nums) {
     let resList=[];
     nums.sort((a, b) => a - b);
 
-
+    // search the remaining pieces for the inp 1
     function twoSum(i){
     let seen = new Set();
     for (let j = i + 1; j < nums.length; j++) {
