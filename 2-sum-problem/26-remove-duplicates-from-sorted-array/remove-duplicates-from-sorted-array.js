@@ -3,6 +3,9 @@
  * @return {number}
  */
 var removeDuplicates = function(nums) {
+    // TC - O(n)
+    // SC - O(1)
+
      let currIndex=0;
      let nextIndex=1;
 
