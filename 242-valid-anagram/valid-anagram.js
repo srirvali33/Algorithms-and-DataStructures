@@ -5,6 +5,9 @@
  */
 var isAnagram = function(s, t) {
 
+    // TC - O(n)
+    //SC - O(1)
+
     let objmp1={};
 
     for(i of s){
