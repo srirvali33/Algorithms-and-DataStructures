@@ -19,11 +19,11 @@ var maxDepth = function (root) {
         const levelSize = vis.length;  
         for (let i = 0; i < levelSize; i++) {
             let currNode = vis.shift();
+             if (currNode.left) {
+                vis.push(currNode.left);
+            }
              if (currNode.right) {
                 vis.push(currNode.right);
-            }
-            if (currNode.left) {
-                vis.push(currNode.left);
             }
         }
         depth++;
