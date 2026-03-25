@@ -11,6 +11,9 @@
  */
 var middleNode = function(head) {
 
+    //TC O(N)
+    //SC O(1)
+
     if(!head) return head;
     let count=0;
     let node=head;
