@@ -12,11 +12,12 @@
  */
 var invertTree = function(root) {
 
+    // SC- O(h) height of tree
+    // TC - O(n) every node is visited once
+
     if(!root){
         return null;
     }
-
-
     const leftTree = invertTree(root.left);
     const rightTree= invertTree(root.right);
 
