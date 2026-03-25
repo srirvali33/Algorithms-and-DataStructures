@@ -28,9 +28,8 @@ var isAnagram = function(s, t) {
         }
     }
 
-    let arr= Object.values(objmp1);
 
-    return arr.filter(i => i !=0).length==0;
+    return Object.values(objmp1).filter(i => i !=0).length==0;
 
 
 
