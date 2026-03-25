@@ -12,6 +12,9 @@
  */
 var hasCycle = function(head) {
 
+    //TC O(n)
+    //SC O(k)
+
     let hset= new Set();
     let curr=head;
 
