@@ -5,7 +5,7 @@
 var rob = function(nums) {
     //TC O(n)
     //SC O(n)
-
+    if (nums.length === 1) return nums[0];
     let houses=[nums[0],Math.max(nums[0],nums[1])];
 
     for(let i=2; i <nums.length; i++){
