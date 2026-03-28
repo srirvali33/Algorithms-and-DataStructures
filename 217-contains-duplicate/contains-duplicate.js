@@ -4,14 +4,13 @@
  */
 var containsDuplicate = function(nums) {
 
-    let dupSet= new Set();
+    let obj={};
 
     for(let i of nums){
-
-        if(dupSet.has(i)){
+        if(obj.hasOwnProperty(i)){
             return true;
         }else{
-            dupSet.add(i);
+            obj[i]=1;
         }
     }
 
