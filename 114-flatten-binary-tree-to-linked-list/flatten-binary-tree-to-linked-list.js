@@ -27,10 +27,6 @@ var flatten = function(root) {
         ptrList[i].right = ptrList[i + 1];
         ptrList[i].left = null;
     }
-
-    
-   // ptrList[ptrList.length - 1].left = null;
-  //  ptrList[ptrList.length - 1].right = null;
     
     return ptrList[0];
     
