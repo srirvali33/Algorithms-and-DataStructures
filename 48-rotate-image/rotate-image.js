@@ -9,9 +9,7 @@ var rotate = function(matrix) {
 	//transpose the matrix
     for (let i = 0 ;i<n;i++ ){
         for(let j=i;j<n;j++){                                       	
-            let temp=matrix[i][j]
-            matrix[i][j]=matrix[j][i]                        // es6 destructure (alternate way to swap)
-			matrix[j][i]=temp								// [arr[i][j], arr[j][i]]=[arr[j][i], arr[i][j]]
+           [matrix[i][j], matrix[j][i]]=[matrix[j][i], matrix[i][j]]						
         }
     }
     
