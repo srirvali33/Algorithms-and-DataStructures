@@ -4,6 +4,9 @@
  */
 var subsets = function(nums) {
 
+    // TC O(2 pow n)
+    // SC O(2 pow n)
+
 const Ans = [];
     const n = nums.length;
 
