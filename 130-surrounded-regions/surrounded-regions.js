@@ -13,6 +13,7 @@ var solve = function(board) {
         visit(i-1,j)
         visit(i,j-1)
     }
+    // traverse top right left bottom to mark the corners marked....
     for(let i = 0; i < c; i++) {
         visit(0,i)
         visit(r-1,i)
